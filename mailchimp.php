@@ -5,9 +5,9 @@
  * Documentation and usage in README file
  *
  * @author Jonas De Smet - Glamorous
- * @date 13.04.2010
+ * @date 02.05.2010
  * @copyright Jonas De Smet - Glamorous
- * @version 0.5
+ * @version 0.5.1
  * @license BSD http://www.opensource.org/licenses/bsd-license.php
  */
 
@@ -21,7 +21,7 @@ class Mailchimp
 
 	const API_URL = '.api.mailchimp.com/1.2/';
 
-	const VERSION = '0.5';
+	const VERSION = '0.5.1';
 
 	/**
 	 * The available return formats
@@ -130,7 +130,6 @@ class Mailchimp
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_FAILONERROR, 1);
-		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 
 		$results = curl_exec($ch);
 		$headers = curl_getinfo($ch);
